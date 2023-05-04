@@ -23,8 +23,8 @@ main {
 }
 
 .dofmoji {
-    height: 82px;
-    width: 82px;
+    height: 64px;
+    width: 64px;
     cursor: pointer;
     object-fit: contain;
 }
