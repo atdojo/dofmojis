@@ -10,10 +10,16 @@ html {
     font-family: sans-serif;   
 }
 
+html, body, main {
+    height: 100%;
+}
+
 main {
     max-width: 600px;
     margin: auto;
     padding: 24px;
+    display: flex;
+    flex-direction: column;
 }
 
 #dofmojis {
@@ -65,7 +71,7 @@ h1 {
 .search-container {
     position: relative;
     width: 250px;
-    margin: 24px auto 36px auto;
+    margin: 48px auto 32px auto;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -98,4 +104,15 @@ a {
 .dofmoji-description {
     font-size: 0.875rem;
     text-align: center;
+}
+
+.footer {
+    text-align: center;
+    padding: 72px 0 24px;
+    margin-top: auto;
+}
+
+.footer img {
+    height: 32px;
+    width: 32px;
 }
