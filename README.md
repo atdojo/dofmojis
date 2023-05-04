@@ -1,5 +1,5 @@
 # Dofmojis
-All dofmojis belong to the [AKL-Discord](https://discord.gg/yCYdghrX). They created them out of thin air and fully embrace the dof-spirit.</p>
+All dofmojis where created by the [AKL-Discord](https://discord.gg/yCYdghrX), some weren't.</p>
 
 # Adding images
 `navigator.clipboard.write` only supports pngs right now which is used to copy images, so only add pngs to the `dofmojis` directory. The name of the file should equal its emoji name. After adding the emoji run
