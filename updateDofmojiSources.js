@@ -6,7 +6,7 @@ const dofmojis = []
 for(const dofmojiFile of dofmojiFiles) {
     dofmojis.push({
         name: path.parse(dofmojiFile).name,
-        url: "/dofmojis/" + dofmojiFile
+        url: "dofmojis/" + dofmojiFile
     })
 }
 
