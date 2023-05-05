@@ -32,9 +32,9 @@ function createDofmojiElement(dofmoji) {
                     [blob.type]: blob,
                 })
             ])
-            e.target.src = "check.svg"
+            e.target.src = "src/assets/check.svg"
         } catch(err) {
-            e.target.src = "close.svg"
+            e.target.src = "src/assets/close.svg"
         }
         e.target.classList.add("disabled")
 
@@ -57,7 +57,7 @@ function createDofmojiElement(dofmoji) {
 }
 
 ;(async () => {
-    const dofmojis = await fetch("dofmojis.json").then(res => res.json())
+    const dofmojis = await fetch("src/assets/dofmojis-build/dofmojis.json").then(res => res.json())
     const fragment = document.createDocumentFragment()
     for(const dofmoji of dofmojis) {
         fragment.appendChild(createDofmojiElement(dofmoji))

@@ -4,9 +4,9 @@ All dofmojis were created by the [AKL-Discord](https://discord.gg/yCYdghrX), som
 # Adding images
 `navigator.clipboard.write` only supports pngs right now which is used to copy images, so only add pngs to the `dofmojis` directory. The name of the file should equal its emoji name. After adding the emoji run
 ```bash
-node updateDofmojiSources.js
+node build.js
 ```
-to update the `dofmojis.json` file.
+to update the files inside `src/assets/dofmojis-build`.
 
 # Download multiple emojis from discord
 1. open discord in browser
