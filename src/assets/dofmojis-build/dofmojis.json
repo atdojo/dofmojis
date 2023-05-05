@@ -36,6 +36,10 @@
         "url": "src/assets/dofmojis/dofbrian.png"
     },
     {
+        "name": "dofchatting",
+        "url": "src/assets/dofmojis/dofchatting.gif"
+    },
+    {
         "name": "dofchef",
         "url": "src/assets/dofmojis/dofchef.png"
     },
@@ -70,6 +74,10 @@
     {
         "name": "dofninis",
         "url": "src/assets/dofmojis/dofninis.png"
+    },
+    {
+        "name": "dofpet",
+        "url": "src/assets/dofmojis/dofpet.gif"
     },
     {
         "name": "dofqueen",

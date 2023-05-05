@@ -34,7 +34,8 @@ function createDofmojiElement(dofmoji) {
             ])
             e.target.src = "src/assets/check.svg"
         } catch(err) {
-            e.target.src = "src/assets/close.svg"
+            await navigator.clipboard.writeText(e.target.src)
+            e.target.src = "src/assets/check.svg"
         }
         e.target.classList.add("disabled")
 
