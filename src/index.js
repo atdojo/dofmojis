@@ -2,9 +2,9 @@ const dofmojiContainer = document.getElementById("dofmojis")
 const dofmojiSearch = document.getElementById("search")
 
 function search(searchText) {
-    for(const child of dofmojiContainer.children) {
+    for (const child of dofmojiContainer.children) {
         const name = child.querySelector(".dofmoji-name").innerText
-        if(name.toLowerCase().includes(searchText.toLowerCase())) {
+        if (name.toLowerCase().includes(searchText.toLowerCase())) {
             child.classList.remove("d-none")
         } else {
             child.classList.add("d-none")
@@ -33,7 +33,7 @@ function createDofmojiElement(dofmoji) {
                 })
             ])
             e.target.src = "src/assets/check.svg"
-        } catch(err) {
+        } catch (err) {
             await navigator.clipboard.writeText(e.target.src)
             e.target.src = "src/assets/check.svg"
         }
@@ -49,7 +49,7 @@ function createDofmojiElement(dofmoji) {
     const belowDofmojiContainer = document.createElement("div")
     belowDofmojiContainer.classList.add("dofmoji-content")
     const nameElement = document.createElement("div")
-    nameElement.classList.add("dofmoji-name")   
+    nameElement.classList.add("dofmoji-name")
     nameElement.innerText = dofmoji.name
     belowDofmojiContainer.appendChild(nameElement)
     container.appendChild(belowDofmojiContainer)
@@ -57,10 +57,27 @@ function createDofmojiElement(dofmoji) {
     return container
 }
 
-;(async () => {
+function toggleSection(id) {
+    const sections = Array.from(document.querySelectorAll('section'))
+    for (const section of sections) {
+        section.classList.add('d-none')
+    }
+    // remove active sections
+    const activeSectionSelector = document.querySelector(".nav-item--active")
+    if (activeSectionSelector) activeSectionSelector.classList.remove('nav-item--active')
+
+    // remove d none active section
+    document.getElementById(id).classList.remove('d-none')
+
+    // set active section selector
+    document.querySelector("nav").querySelector(`[data-section-id="${id}"]`).classList.add('nav-item--active')
+}
+
+; (async () => {
+    toggleSection("explore")
     const dofmojis = await fetch("src/assets/dofmojis-build/dofmojis.json").then(res => res.json())
     const fragment = document.createDocumentFragment()
-    for(const dofmoji of dofmojis) {
+    for (const dofmoji of dofmojis) {
         fragment.appendChild(createDofmojiElement(dofmoji))
     }
     dofmojiContainer.append(fragment)
@@ -68,6 +85,6 @@ function createDofmojiElement(dofmoji) {
     dofmojiSearch.addEventListener("input", (e) => {
         search(e.target.value)
     })
-    
+
     dofmojiSearch.focus()
 })()

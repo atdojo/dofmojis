@@ -15,4 +15,6 @@ for(const dofmojiFile of dofmojiFiles) {
 fs.writeFileSync("./src/assets/dofmojis-build/dofmojis.json", JSON.stringify(dofmojis, null, 4))
 
 // update zip file
-child_process.execSync("zip -r ./src/assets/dofmojis-build/dofmojis.zip ./src/assets/dofmojis")
+// change directory to assets so zip wont all multiple paths
+process.chdir("src/assets")
+child_process.execSync("zip -r dofmojis-build/dofmojis.zip dofmojis")

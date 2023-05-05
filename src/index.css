@@ -5,8 +5,8 @@
 }
 
 html {
-    background-color: #1f2428;
-    color: #E1E4E8;
+    background-color: #0b0f14;
+    color: #d6d6d6;
     font-family: sans-serif;   
 }
 
@@ -48,10 +48,8 @@ main {
     text-align: center;
 }
 
-h1 {
+.section-selector-heading {
     text-align: center;
-    padding: 24px;
-    font-size: 48px;
 }
 
 .d-none {
@@ -59,32 +57,29 @@ h1 {
 }
 
 #search {
-    background: #1f2428;
-    color: #E1E4E8;
-    border: 1px solid #E1E4E8 ;
+    color: #d6d6d6;
+    border: none;
+    background: #1f2429;
     outline: none;
-    padding: 8px 40px;
+    padding-inline-start: 52px;
     width: 100%;
     font-size: 1rem;
+    border-radius: 22px;
+    height: 36px;
 }
 
 .search-container {
+    width: 300px;
+    margin: 0 auto 32px auto;
     position: relative;
-    width: 250px;
-    margin: 48px auto 32px auto;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
 }
 
 .search-icon {
     position: absolute;
-    left: 8px;
-    top: 22px;
+    top: 6px;
+    left: 16px;
     height: 24px;
     width: 24px;
-    object-fit: contain;
 }
 
 .disabled {
@@ -97,8 +92,22 @@ label {
 }
 
 a {
-    color: #79B8FF;
     text-decoration: none;
+    color: rgb(63, 144, 209);
+}
+
+#downloads a {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+#downloads a img {
+    padding-right: 4px;
+}
+
+.row {
+    padding: 12px;
 }
 
 .dofmoji-description {
@@ -112,7 +121,36 @@ a {
     margin-top: auto;
 }
 
-.footer img {
+img {
     height: 32px;
     width: 32px;
+}
+
+nav {
+    display: flex;
+    margin: 0 auto;
+    margin: 0 auto 32px; 
+    width: 320px;
+}
+
+.nav-item {
+    cursor: pointer;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-icon {
+    height: 16px;
+    width: 16px;
+    visibility: hidden;
+    margin-left: 2px;
+}
+
+.nav-item--active .nav-icon {
+    visibility: visible;
+}
+
+.nav-item--active {
+    border-bottom: 1px solid #d6d6d6;
 }

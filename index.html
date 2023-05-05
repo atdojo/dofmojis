@@ -12,14 +12,44 @@
 </head>
 <body>
     <main>
-        <h1>Dofmojis</a></h1>
-        <p class="dofmoji-description">All dofmojis were created by the <a href="https://discord.gg/yCYdghrX" target="_blank">AKL-Discord</a>, some weren't. Click on a dofmoji to copy.</p>
-        <div class="search-container">
-            <label for="search">search</label>
-            <input id="search"></input>
-            <img class="search-icon" src="src/assets/dofmojis/doftective.png" alt="doftective search icon"></img>
-        </div>
-        <div id="dofmojis"></div>
+        <nav>
+            <div class="nav-item" onclick="toggleSection('downloads')" data-section-id="downloads">
+                <span>get</span>
+                <img class="nav-icon" src="src/assets/dofmojis/doftective.png" alt="doftective search icon"></img>
+            </div>
+            <div class="nav-item" onclick="toggleSection('explore')" data-section-id="explore">
+                <span>dofmojis</span>
+                <img class="nav-icon" src="src/assets/dofmojis/doftective.png" alt="doftective search icon"></img>
+            </div>
+            <div class="nav-item" onclick="toggleSection('about')" data-section-id="about">
+                <span>about</span>
+                <img class="nav-icon" src="src/assets/dofmojis/doftective.png" alt="doftective search icon"></img>
+            </div>
+        </nav>
+        <section id="explore">
+            <div class="search-container">
+                <input id="search" placeholder="Search..."></input>
+                <img class="search-icon" src="src/assets/magnify.svg"></img>
+            </div>
+            <div id="dofmojis"></div>
+        </section>
+        <section id="downloads">
+            <div class="row">
+                <a href="src/assets/dofmojis-build/dofmojis.zip" download="dofmojis.zip">
+                    <img src="src/assets/folder-zip.svg" alt="Zip folder icon">
+                    dofmojis.zip
+                </a>
+            </div>
+            <div class="row">
+                <a href="src/assets/dofmojis-build/dofmojis.json" download="dofmojis.json">
+                    <img src="src/assets/code-json.svg" alt="Json code icon">
+                    dofmojis.json
+                </a>
+            </div>
+        </section>
+        <section id="about">
+            <p class="dofmoji-description">All dofmojis were created by the <a href="https://discord.gg/yCYdghrX" target="_blank">AKL-Discord</a>, some weren't. Click on a dofmoji to copy.</p>
+        </section>
         <div class="footer">
             <a href="https://github.com/atdojo/dofmojis" target="_blank"><img src="src/assets/github-mark-white.svg" alt="GitHub link">
         </div>
